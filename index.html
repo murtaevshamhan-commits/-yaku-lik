@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="ЯКУ ЛИК — десертная студия. Авторские десерты, которые превращают обычный день в маленький праздник.">
+<title>ЯКУ ЛИК — десертная студия</title>
+<meta property="og:title" content="ЯКУ ЛИК — десертная студия">
+<meta property="og:description" content="Авторские десерты, нежные кремы и яркие вкусы.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=1200&q=85">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍰</text></svg>">
+<style>
+:root{--purple:#8f36b6;--deep:#64217f;--lilac:#d9a8ef;--cream:#fffaf5;--ink:#321b3a;--muted:#765e7c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:var(--cream)}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}
+.nav{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:18px 6vw;background:rgba(111,35,143,.96);color:#fff;backdrop-filter:blur(12px)}
+.logo{font-weight:900;font-size:25px;letter-spacing:-1.5px;line-height:.9}.logo small{display:block;font-size:9px;letter-spacing:2px;margin-top:6px;font-weight:600}
+.links{display:flex;gap:27px;font-size:13px;font-weight:650}.links a:hover{opacity:.7}
+.nav-cta,.btn{border:0;border-radius:999px;padding:13px 20px;background:#fff;color:var(--deep);font-weight:750;cursor:pointer;transition:.2s}.btn:hover,.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 22px #40145230}
+.hero{position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,#c96ce2 0,transparent 32%),linear-gradient(125deg,#76239c,#a846c7 58%,#7c2c9e);color:#fff;padding:78px 6vw 86px;min-height:620px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px}
+.hero:before{content:"";position:absolute;width:540px;height:540px;border:1px solid #ffffff30;border-radius:50%;right:-140px;top:-220px}
+.eyebrow{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:800;opacity:.85}
+.hero h1{font-size:clamp(42px,6.1vw,82px);line-height:.96;letter-spacing:-4px;margin:22px 0 25px;max-width:700px}
+.hero p{font-size:17px;line-height:1.6;max-width:430px;color:#f8eafa}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn.primary{background:#fff;color:#6e248b}.btn.ghost{border:1px solid #ffffff80;background:transparent;color:#fff}
+.hero-art{position:relative;min-height:430px}
+.photo{position:absolute;object-fit:cover;box-shadow:0 22px 55px #32103d45;border:7px solid #ffffff26}
+.photo.one{width:53%;height:300px;right:3%;top:2%;border-radius:24px 24px 80px 24px;transform:rotate(4deg)}
+.photo.two{width:46%;height:245px;left:2%;top:28%;border-radius:65px 18px 22px 22px;transform:rotate(-7deg)}
+.photo.three{width:40%;height:190px;right:0;bottom:0;border-radius:20px 60px 20px 20px;transform:rotate(5deg)}
+.scribble{position:absolute;font-size:72px;color:#f7d7ff;z-index:2}.s1{left:0;top:8%}.s2{right:0;bottom:4%}
+.ticker{background:#f0d6f7;color:#6e248b;white-space:nowrap;overflow:hidden;padding:15px 0;font-weight:850;letter-spacing:2px;font-size:13px}
+.ticker span{display:inline-block;padding-left:20px;animation:move 28s linear infinite}@keyframes move{to{transform:translateX(-50%)}}
+section{padding:85px 6vw}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:35px}
+.kicker{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--purple);font-weight:850}
+.section-head h2,.story h2,.franchise h2{font-size:clamp(32px,4vw,52px);line-height:1.02;letter-spacing:-2px;margin:10px 0 0}
+.section-head p{max-width:360px;line-height:1.6;color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.product{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 8px 28px #4b24500b;transition:.25s}.product:hover{transform:translateY(-5px)}
+.product img{width:100%;height:260px;object-fit:cover;display:block}
+.product-info{padding:20px}.product-info h3{margin:0 0 8px;font-size:20px}.product-info p{color:var(--muted);font-size:14px;line-height:1.5;min-height:42px}
+.product-bottom{display:flex;justify-content:space-between;align-items:center;margin-top:16px}
+.price{font-weight:850;font-size:19px}
+.add{border:0;background:#f0d6f7;color:#6e248b;border-radius:50%;width:42px;height:42px;font-size:24px;cursor:pointer;transition:.2s}.add:hover{background:#e0b8ef;transform:scale(1.1)}
+.story{background:#f4e8f7;display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+.story img{width:100%;height:420px;object-fit:cover;border-radius:28px 110px 28px 28px}
+.story p{line-height:1.8;color:var(--muted);max-width:520px}
+.stats{display:flex;gap:30px;margin-top:28px;flex-wrap:wrap}.stat strong{display:block;font-size:30px;color:var(--purple)}.stat span{font-size:12px;color:var(--muted)}
+.franchise{background:linear-gradient(125deg,#742294,#a644c4);color:#fff;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.franchise p{line-height:1.7;color:#f7e6fb;max-width:560px}.franchise .kicker{color:#f4d6ff}
+.benefits{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+.benefit{border:1px solid #ffffff40;padding:16px;border-radius:16px;font-size:14px}
+.lead-form{background:#fff;color:var(--ink);padding:26px;border-radius:24px;box-shadow:0 20px 55px #310f3b30}
+.lead-form h3{margin:0 0 8px;font-size:24px}.lead-form p{color:var(--muted);font-size:13px;margin:0 0 18px}
+.lead-form input,.lead-form textarea,.lead-form select{width:100%;padding:13px 14px;margin:7px 0;border:1px solid #e7d9eb;border-radius:12px;background:#fff}
+.lead-form textarea{min-height:80px;resize:vertical}
+.lead-form .btn{width:100%;background:var(--purple);color:#fff;margin-top:8px}
+.form-note{font-size:11px!important;margin-top:10px!important}
+.contact{display:flex;justify-content:space-between;align-items:center;gap:25px;background:#fff}
+.contact h2{font-size:clamp(30px,4vw,46px);letter-spacing:-2px;margin:8px 0}.contact p{color:var(--muted)}
+footer{background:#291331;color:#e9d8ee;padding:28px 6vw;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px}
+footer a:hover{color:#fff}
+.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,120px);background:#2f1738;color:white;padding:14px 20px;border-radius:99px;z-index:40;transition:.3s;box-shadow:0 8px 30px #0003}.toast.show{transform:translate(-50%,0)}
+.cart-btn{position:fixed;bottom:22px;right:22px;z-index:30;background:var(--purple);color:#fff;border:0;border-radius:50%;width:60px;height:60px;font-size:24px;cursor:pointer;box-shadow:0 8px 30px #40145260;transition:.2s}.cart-btn:hover{transform:scale(1.1)}
+.cart-count{position:absolute;top:-5px;right:-5px;background:#ff4d6d;color:#fff;border-radius:50%;width:24px;height:24px;font-size:12px;font-weight:800;display:flex;align-items:center;justify-content:center}
+.cart-modal{position:fixed;inset:0;background:#00000080;z-index:50;display:none;align-items:center;justify-content:center;padding:20px}.cart-modal.show{display:flex}
+.cart-content{background:#fff;border-radius:24px;padding:30px;max-width:500px;width:100%;max-height:80vh;overflow-y:auto}
+.cart-content h3{margin:0 0 20px}.cart-item{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid #eee}.cart-item:last-child{border-bottom:0}
+.cart-total{font-weight:850;font-size:20px;margin-top:20px;text-align:right}
+.mobile-menu{display:none}
+.mobile-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#6e248b;padding:20px;flex-direction:column;gap:15px}.mobile-nav.show{display:flex}.mobile-nav a{font-size:16px;padding:8px}
+@media(max-width:800px){.links{display:none}.mobile-menu{display:block;background:transparent;color:white;border:1px solid #ffffff70;border-radius:50%;width:42px;height:42px;font-size:20px;cursor:pointer}.hero{grid-template-columns:1fr;padding-top:60px}.hero-art{min-height:370px}.hero h1{letter-spacing:-2.5px}.grid{grid-template-columns:repeat(2,1fr)}.story,.franchise{grid-template-columns:1fr}.story img{height:320px}.section-head{align-items:start;flex-direction:column}.contact{align-items:start;flex-direction:column}}
+@media(max-width:520px){.nav{padding:15px 5vw}.nav-cta{padding:10px 13px;font-size:12px}.hero{padding:52px 5vw 55px;min-height:auto}.hero h1{font-size:47px}.hero-art{min-height:320px}.photo.one{height:220px}.photo.two{height:190px}.photo.three{height:140px}section{padding:60px 5vw}.grid{grid-template-columns:1fr}.product img{height:260px}.benefits{grid-template-columns:1fr 1fr}.stats{gap:18px}.story img{height:270px}.lead-form{padding:20px}}
+</style>
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#top">ЯКУ ЛИК<small>ДЕСЕРТНАЯ СТУДИЯ</small></a>
+  <nav class="links"><a href="#menu">Десерты</a><a href="#story">О нас</a><a href="#franchise">Партнёрам</a><a href="#contacts">Контакты</a></nav>
+  <a class="nav-cta" href="#menu">Выбрать десерт ↗</a>
+  <button class="mobile-menu" aria-label="Открыть меню" onclick="toggleMobileMenu()">☰</button>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#menu" onclick="toggleMobileMenu()">Десерты</a>
+    <a href="#story" onclick="toggleMobileMenu()">О нас</a>
+    <a href="#franchise" onclick="toggleMobileMenu()">Партнёрам</a>
+    <a href="#contacts" onclick="toggleMobileMenu()">Контакты</a>
+  </nav>
+</header>
+<main id="top">
+<section class="hero">
+ <div><div class="eyebrow">Маленькие радости каждый день</div><h1>МИР<br>СТАНОВИТСЯ<br>СЛАЩЕ.</h1><p>Авторские десерты, нежные кремы и яркие вкусы. Создаём сладкие моменты, которые хочется разделить.</p><div class="hero-actions"><a class="btn primary" href="#menu">Смотреть десерты ↗</a><a class="btn ghost" href="#franchise">Стать партнёром</a></div></div>
+ <div class="hero-art"><span class="scribble s1">♡</span><img class="photo one" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85" alt="Праздничный шоколадный торт"><img class="photo two" src="https://images.unsplash.com/photo-1551024506-0b9d1e2b5b7a?auto=format&fit=crop&w=800&q=85" alt="Свежие пончики"><img class="photo three" src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=700&q=85" alt="Десерт с кремом и ягодами"><span class="scribble s2">✧</span></div>
+</section>
+<div class="ticker"><span>НЕЖНО • ВКУСНО • С ЛЮБОВЬЮ • НЕЖНО • ВКУСНО • С ЛЮБОВЬЮ • НЕЖНО • ВКУСНО • С ЛЮБОВЬЮ • </span></div>
+<section id="menu">
+ <div class="section-head"><div><div class="kicker">Витрина настроения</div><h2>С чего начнём?</h2></div><p>Каждый десерт — маленькая история. Выбирай любимый вкус или открывай новый.</p></div>
+ <div class="grid">
+  <article class="product"><img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85" alt="Шоколадный торт"><div class="product-info"><h3>Шоколадная история</h3><p>Насыщенный шоколад, воздушный крем и мягкий бисквит.</p><div class="product-bottom"><span class="price">от 490 ₽</span><button class="add" onclick="addToCart('Шоколадная история',490)" aria-label="Добавить шоколадный торт">+</button></div></div></article>
+  <article class="product"><img src="https://images.unsplash.com/photo-1551024506-0b9d1e2b5b7a?auto=format&fit=crop&w=900&q=85" alt="Пончики с глазурью"><div class="product-info"><h3>Пончики «Облачко»</h3><p>Нежное тесто и глазурь, которая поднимает настроение.</p><div class="product-bottom"><span class="price">от 190 ₽</span><button class="add" onclick="addToCart('Пончики «Облачко»',190)" aria-label="Добавить пончики">+</button></div></div></article>
+  <article class="product"><img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=900&q=85" alt="Десерт с ягодами"><div class="product-info"><h3>Ягодное облако</h3><p>Лёгкий сливочный десерт с ягодной свежестью.</p><div class="product-bottom"><span class="price">от 320 ₽</span><button class="add" onclick="addToCart('Ягодное облако',320)" aria-label="Добавить ягодный десерт">+</button></div></div></article>
+ </div>
+</section>
+<section class="story" id="story">
+ <img src="https://images.unsplash.com/photo-1550617931-e17a7b70dce2?auto=format&fit=crop&w=1200&q=85" alt="Кондитер украшает свежую выпечку">
+ <div><div class="kicker">Сладкое дело с душой</div><h2>Не просто десерт.<br>Твоё настроение.</h2><p>«ЯКУ ЛИК» — концепция современной десертной студии, где вкус встречается с эстетикой. Мы верим, что даже самый обычный день заслуживает красивого финала: чашки кофе, любимого пирожного и нескольких минут для себя.</p><p>Готовим небольшими партиями, уделяем внимание деталям и постоянно ищем сочетания, которые удивляют.</p><div class="stats"><div class="stat"><strong>200+</strong><span>идей для витрины</span></div><div class="stat"><strong>7 дней</strong><span>в неделю для радости</span></div><div class="stat"><strong>100%</strong><span>внимания к деталям</span></div></div></div>
+</section>
+<section class="franchise" id="franchise">
+ <div><div class="kicker">Для тех, кто хочет больше</div><h2>Открой свою<br>сладкую историю.</h2><p>Рассматриваешь собственную кондитерскую или хочешь поставлять десерты в своё заведение? Давай обсудим формат сотрудничества — от небольшой витрины до отдельной студии.</p><div class="benefits"><div class="benefit">✦ Помощь с концепцией</div><div class="benefit">✦ Ассортимент и подача</div><div class="benefit">✦ Поддержка на старте</div><div class="benefit">✦ Формат под твой город</div></div></div>
+ <form class="lead-form" id="leadForm"><h3>Обсудим идею?</h3><p>Оставь контакты — подготовим следующий шаг.</p><input name="name" placeholder="Как к тебе обращаться" required><input name="phone" type="tel" placeholder="Телефон для связи" required><select name="interest"><option value="Партнёрство">Хочу стать партнёром</option><option value="Поставка десертов">Интересуют поставки десертов</option><option value="Другое">Другой вопрос</option></select><textarea name="message" placeholder="Город или пара слов о проекте (необязательно)"></textarea><button class="btn" type="submit">Отправить заявку ↗</button><p class="form-note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных.</p></form>
+</section>
+<section class="contact" id="contacts"><div><div class="kicker">На связи</div><h2>Есть повод для сладкого?</h2><p>Напиши нам — поможем выбрать десерт или обсудим сотрудничество.</p></div><a class="btn primary" href="#franchise">Связаться с нами ↗</a></section>
+</main>
+<footer>
+  <a class="logo" href="#top">ЯКУ ЛИК<small>ДЕСЕРТНАЯ СТУДИЯ</small></a>
+  <span>Концепт сайта • 2026</span>
+  <span>Десерты, созданные с любовью ♡</span>
+  <span>
+    <a href="https://t.me/your_telegram" target="_blank" rel="noopener">Telegram</a> • 
+    <a href="https://wa.me/79000000000" target="_blank" rel="noopener">WhatsApp</a>
+  </span>
+</footer>
+<button class="cart-btn" onclick="toggleCart()" aria-label="Корзина">🛒<span class="cart-count" id="cartCount">0</span></button>
+<div class="cart-modal" id="cartModal">
+  <div class="cart-content">
+    <h3>🛒 Ваш заказ</h3>
+    <div id="cartItems"></div>
+    <div class="cart-total" id="cartTotal">Итого: 0 ₽</div>
+    <button class="btn" style="width:100%;margin-top:15px" onclick="checkout()">Оформить заказ ↗</button>
+    <button class="btn" style="width:100%;margin-top:10px;background:#eee;color:#333" onclick="toggleCart()">Закрыть</button>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+function toggleMobileMenu(){document.getElementById('mobileNav').classList.toggle('show')}
+let cart = JSON.parse(localStorage.getItem('yakulik_cart') || '[]');
+function saveCart(){localStorage.setItem('yakulik_cart', JSON.stringify(cart))}
+function updateCartUI(){
+  const count = cart.reduce((s,i)=>s+i.qty,0);
+  document.getElementById('cartCount').textContent = count;
+  const itemsDiv = document.getElementById('cartItems');
+  const totalDiv = document.getElementById('cartTotal');
+  if(cart.length === 0){
+    itemsDiv.innerHTML = '<p style="color:#999;text-align:center;padding:20px">Корзина пуста</p>';
+    totalDiv.textContent = 'Итого: 0 ₽';
+    return;
+  }
+  let html = '', total = 0;
+  cart.forEach((item, idx) => {
+    html += `<div class="cart-item">
+      <div><b>${item.name}</b><br><small>${item.qty} × ${item.price} ₽</small></div>
+      <div><b>${item.qty * item.price} ₽</b> <button onclick="removeFromCart(${idx})" style="border:0;background:none;color:#ff4d6d;cursor:pointer;font-size:18px">✕</button></div>
+    </div>`;
+    total += item.qty * item.price;
+  });
+  itemsDiv.innerHTML = html;
+  totalDiv.textContent = 'Итого: ' + total + ' ₽';
+}
+function addToCart(name, price){
+  const existing = cart.find(i => i.name === name);
+  if(existing) existing.qty++;
+  else cart.push({name, price, qty:1});
+  saveCart(); updateCartUI();
+  showToast('Добавлено: ' + name + ' 🛒');
+}
+function removeFromCart(idx){cart.splice(idx,1); saveCart(); updateCartUI();}
+function toggleCart(){document.getElementById('cartModal').classList.toggle('show');}
+function checkout(){
+  if(cart.length === 0){ showToast('Корзина пуста!'); return; }
+  const total = cart.reduce((s,i)=>s+i.qty*i.price,0);
+  const text = 'Заказ:\n' + cart.map(i => `${i.name} × ${i.qty} = ${i.qty*i.price} ₽`).join('\n') + '\n\nИтого: ' + total + ' ₽';
+  window.open('https://wa.me/79000000000?text=' + encodeURIComponent(text), '_blank');
+  showToast('Открываем WhatsApp…');
+}
+const toast = document.getElementById('toast');
+function showToast(message){toast.textContent = message;toast.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer = setTimeout(() => toast.classList.remove('show'), 2600);}
+document.getElementById('leadForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  const data = new FormData(this);
+  const name = data.get('name').trim();
+  const phone = data.get('phone').trim();
+  const phoneClean = phone.replace(/[^\d+]/g, '');
+  if(phoneClean.length < 10){showToast('Введите корректный телефон 📞');return;}
+  const MY_EMAIL = 'hello@yakulik.ru';
+  const subject = encodeURIComponent('Заявка с сайта ЯКУ ЛИК — ' + data.get('interest'));
+  const body = encodeURIComponent('Имя: ' + name + '\nТелефон: ' + phone + '\nИнтерес: ' + data.get('interest') + '\nКомментарий: ' + (data.get('message') || '—'));
+  showToast('Открываем почтовое приложение…');
+  setTimeout(() => {window.location.href = 'mailto:' + MY_EMAIL + '?subject=' + subject + '&body=' + body;}, 450);
+});
+updateCartUI();
+</script>
+</body>
+</html>
